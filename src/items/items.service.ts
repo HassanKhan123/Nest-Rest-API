@@ -18,4 +18,12 @@ export class ItemsService {
             qty:10
         }
     ]
+
+    findAll() : Item[] {
+        return this.items
+    }
+
+    findOne(id:string):Item{
+       return this.items.find(item => item.id === id)
+    }
 }
